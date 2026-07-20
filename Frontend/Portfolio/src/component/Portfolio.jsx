@@ -4,6 +4,13 @@ import { faCode, faCertificate, faLayerGroup } from "@fortawesome/free-solid-svg
 import ProjectCard from './ProjectCard.jsx'
 import projects from '../data/projects.js'
 import Reveal from './Reveal.jsx'
+import image1 from '../assets/image copy 2.png'
+import image2 from '../assets/image copy 3.png'
+import image3 from '../assets/image copy 4.png'
+import image4 from '../assets/image copy 7.png'
+import image5 from '../assets/image copy 6.png'
+import image6 from '../assets/image copy 5.png'
+import image7 from '../assets/image copy.png'
 
 const Portfolio = ({ onSelectProject }) => {
     const portfolioItems = [
@@ -18,13 +25,13 @@ const Portfolio = ({ onSelectProject }) => {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo6-3t3BSBBmBFu_vTgK_Hsx7AurV6E7g4UP-1PCGQ9w&s=10"
     ];
     const techStacks = [
-        { title: "React", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo6-3t3BSBBmBFu_vTgK_Hsx7AurV6E7g4UP-1PCGQ9w&s=10" },
-        { title: "Node.js", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo6-3t3BSBBmBFu_vTgK_Hsx7AurV6E7g4UP-1PCGQ9w&s=10" },
-        { title: "MySQL", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo6-3t3BSBBmBFu_vTgK_Hsx7AurV6E7g4UP-1PCGQ9w&s=10" },
-        { title: "Tailwind CSS", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo6-3t3BSBBmBFu_vTgK_Hsx7AurV6E7g4UP-1PCGQ9w&s=10" },
-        { title: "Java", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo6-3t3BSBBmBFu_vTgK_Hsx7AurV6E7g4UP-1PCGQ9w&s=10" },
-        { title: "C++", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo6-3t3BSBBmBFu_vTgK_Hsx7AurV6E7g4UP-1PCGQ9w&s=10" },
-        { title: "C", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo6-3t3BSBBmBFu_vTgK_Hsx7AurV6E7g4UP-1PCGQ9w&s=10" }
+        { title: "React", image: image1 },
+        { title: "Node.js", image: image2 },
+        { title: "MySQL", image: image3 },
+        { title: "Tailwind CSS", image: image4 },
+        { title: "Java", image: image5 },
+        { title: "C++", image: image6 },
+        { title: "C", image: image7 }
     ];
 
     const [activeItem, setActiveItem] = useState("Project");

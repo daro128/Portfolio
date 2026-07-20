@@ -1,7 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload, faCode, faCertificate, faEarth } from "@fortawesome/free-solid-svg-icons";
-import photo from '../assets/image copy.png'
+import photo from '../assets/image copy 8.png'
 import Reveal from './Reveal.jsx'
 const AboutMe = () => {
     const achievements = [

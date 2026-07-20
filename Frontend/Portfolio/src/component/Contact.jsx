@@ -29,12 +29,16 @@ const Icon = {
   linkedin: (c = "") => (
     <svg className={c} viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45z"/></svg>
   ),
-  instagram: (c = "") => (
-    <svg className={c} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-  ),
-  youtube: (c = "") => (
-    <svg className={c} viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
-  ),
+  facebook: (c = "") => (
+  <svg className={c} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.03 4.39 11.03 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.54-4.69 1.31 0 2.68.24 2.68.24v2.96h-1.51c-1.49 0-1.95.93-1.95 1.88v2.27h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/>
+  </svg>
+),
+  telegram: (c = "") => (
+  <svg className={c} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M9.999 15.17l-.398 5.607c.57 0 .816-.245 1.11-.54l2.664-2.544 5.52 4.04c1.012.558 1.73.265 2.003-.93l3.63-17.02c.347-1.607-.58-2.236-1.566-1.87L1.73 9.405c-1.548.603-1.525 1.468-.264 1.86l5.432 1.695L19.5 5.01c.594-.38 1.136-.17.692.21L9.999 15.17z"/>
+  </svg>
+),
   tiktok: (c = "") => (
     <svg className={c} viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.9 2.9 0 0 1-5.2 1.74 2.9 2.9 0 0 1 2.31-4.64c.3 0 .58.04.86.13V9.4a6.33 6.33 0 0 0-.86-.05A6.34 6.34 0 0 0 5 22.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.45a4.85 4.85 0 0 1-1.04-.05z"/></svg>
   ),
@@ -270,10 +274,10 @@ export default function Contact() {
             <div className="grid grid-cols-2 gap-3">
               {/* CHANGE THESE LINKS + HANDLES TO YOURS */}
               <SocialCard wide icon={Icon.linkedin("h-5 w-5 text-sky-400")} title="Let's Connect" handle="on LinkedIn" href="https://linkedin.com/in/yourname" />
-              <SocialCard icon={Icon.instagram("h-5 w-5 text-pink-400")} title="Instagram" handle="@yourname" href="https://instagram.com/yourname" />
-              <SocialCard icon={Icon.youtube("h-5 w-5 text-red-500")} title="Videos" handle="@yourname" href="https://youtube.com/@yourname" />
-              <SocialCard icon={Icon.github("h-5 w-5 text-slate-200")} title="Github" handle="@yourname" href="https://github.com/yourname" />
-              <SocialCard icon={Icon.tiktok("h-5 w-5 text-slate-200")} title="Tiktok" handle="@yourname" href="https://tiktok.com/@yourname" />
+              <SocialCard icon={Icon.facebook("h-5 w-5 text-sky-500")} title="Facebook" handle="@darorat" href="https://www.facebook.com/share/14hxD87t8qW/?mibextid=wwXIfr" />
+              <SocialCard icon={Icon.telegram("h-5 w-5 text-sky-500")} title="Telegram" handle="@DARO" href="https://t.me/daroRat" />
+              <SocialCard icon={Icon.github("h-5 w-5 text-slate-200")} title="Github" handle="@Daro Rat" href="https://github.com/daro128" />
+              <SocialCard icon={Icon.tiktok("h-5 w-5 text-slate-200")} title="Tiktok" handle="@darorat113" href="https://www.tiktok.com/@darorat113?is_from_webapp=1&sender_device=pc" />
             </div>
           </div>
         </Reveal>

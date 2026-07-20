@@ -8,9 +8,9 @@ const ProjectCard = ({ image, title, description, liveDemo, onDetails }) => {
             <img src={image} alt={title} className="w-full h-44 object-cover" />
 
             <div className="p-4">
-                <h3 className="text-white font-bold text-lg">{title}</h3>
+                <h3 className="text-start text-white font-bold text-lg">{title}</h3>
 
-                <p className="text-gray-400 text-sm mt-2 line-clamp-2">{description}</p>
+                <p className="text-start text-gray-400 text-sm mt-2 line-clamp-2">{description}</p>
 
                 <div className="flex justify-between items-center mt-6">
                     <a href={liveDemo} target="_blank" rel="noreferrer" className="text-blue-400 text-sm flex items-center gap-2 hover:text-blue-300">
