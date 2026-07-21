@@ -37,6 +37,15 @@ const AboutMe = () => {
                             <FontAwesomeIcon icon={faDownload} className='pr-2' />
                             Download Resume
                         </a>
+                        <a
+                            href='/resume.pdf'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                            style={{ "--glow-color": "rgba(255,255,255,0.5)" }}
+                            className='hover-glow transition-all hover:cursor-pointer bg-transparent border border-white/10 text-white font-bold py-2 px-4 rounded-sm hover:bg-white/10 inline-flex items-center'
+                        >
+                            View CV
+                        </a>
                         <button
                             onClick={() => scrollTo("portfolio")}
                             style={{ "--glow-color": "rgba(255,255,255,0.5)" }}
