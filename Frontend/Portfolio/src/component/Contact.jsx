@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import Reveal from "./Reveal.jsx";
-import { sendContactMessage, isEmailConfigured } from "../services/emailService.js";
+import { sendMessage, sendCommentNotification } from "../services/contact.js";
 import { fetchComments, postComment, isSupabaseConfigured } from "../services/commentsService.js";
 
 const Icon = {
@@ -140,25 +140,30 @@ export default function Contact() {
 
   const handleSend = async (e) => {
     e.preventDefault();
+
     if (!validateForm()) return;
+
     setSending(true);
     setSendError("");
+
     try {
-      if (isEmailConfigured) {
-        await sendContactMessage(form);
-      } else {
-        // EmailJS not configured yet (see Frontend/.env.example) — simulate so the UI still works.
-        await new Promise((resolve) => setTimeout(resolve, 1200));
-      }
-      setSent(true);
-      setForm({ name: "", email: "", message: "" });
-      setTimeout(() => setSent(false), 3000);
+        await sendMessage(form);
+
+        setSent(true);
+        setForm({
+            name: "",
+            email: "",
+            message: "",
+        });
+
+        setTimeout(() => setSent(false), 3000);
+
     } catch (err) {
-      setSendError(err.message || "Failed to send message. Please try again.");
+        setSendError(err.message || "Failed to send message.");
     } finally {
-      setSending(false);
+        setSending(false);
     }
-  };
+};
 
   const handlePhoto = (e) => {
     const file = e.target.files?.[0];
@@ -196,6 +201,10 @@ export default function Contact() {
     setComment({ name: "", message: "" });
     setPhoto(null);
     setPhotoName("");
+
+    sendCommentNotification({ name: comment.name, message: comment.message }).catch(() => {
+      // Notification failure shouldn't block the comment from being posted.
+    });
   };
 
   const inputCls =
