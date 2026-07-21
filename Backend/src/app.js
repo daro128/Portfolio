@@ -7,6 +7,11 @@ import { notFound } from './middleware/notFound.js'
 import { errorHandler } from './middleware/errorHandler.js'
 
 const app = express()
+app.get("/", (req, res) => {
+    res.json({
+        message: "Backend is running successfully"
+    });
+});
 
 app.use(cors({ origin: process.env.CORS_ORIGIN || 'http://localhost:5173' }))
 app.use(express.json())
