@@ -1,20 +1,21 @@
-
+import image9 from "../assets/image copy 9.png"
 const projects = [
   {
     slug: "project-1",
-    title: "Project 1",
-    shortDescription: "Description of Project 1",
+    title: "Crave24h Food delivery System",
+    shortDescription: "Crave24 is a food delivery web application that allows customers to browse restaurants, order meals, manage carts, and subscribe to monthly meal plans. Built with React, Node.js, Express, and MySQL",
     description:
-      "Replace this with a full description of what the project does, the problem it solves, and how it works.",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsWijSwsYaXXJLZfni0HuVNEL-UZyLwP12CSWHXv1r9A&s=10",
+      "Crave24 is a full-stack food delivery web application that allows customers to browse restaurants, order meals, manage their carts, track orders, and subscribe to monthly meal plans. The system provides secure authentication, payment options, reviews, notifications, and a subscription feature to improve the customer experience. Built with React, Node.js, Express, Sequelize, and MySQL, the project focuses on creating a smooth and scalable online food ordering platform.",
+    image: image9,
     video: "",
-    liveDemo: "#",
-    github: "#",
-    technologies: ["React", "Node.js", "Tailwind CSS"],
+    liveDemo: "https://crave24h.vercel.app",
+    github: "https://github.com/daro128/crave24h.git",
+    technologies: ["React", "Node.js", "Express", "Sequelize", "MySQL", "Tailwind CSS"],
+
     keyFeatures: [
-      "Describe the first key feature.",
-      "Describe the second key feature.",
-      "Describe the third key feature.",
+      "Secure user authentication with JWT and role-based access control.",
+      "Food ordering system with restaurant browsing, cart management, and checkout.",
+      "Monthly meal subscription and order tracking features for customers.",
     ],
   },
   {
